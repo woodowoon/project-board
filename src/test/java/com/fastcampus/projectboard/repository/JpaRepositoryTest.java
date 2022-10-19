@@ -50,7 +50,7 @@ class JpaRepositoryTest {
         long previousCount = articleRepository.count();
 
         // when
-        Article savedArticle = articleRepository.save(Article.of("new Article", "new content", "#spring"));
+        Article savedArticle = articleRepository.save(Article.of(userAccountDto.toEntity(), "new Article", "new content", "#spring"));
 
         // then
         assertThat(articleRepository.count()).isEqualTo(previousCount + 1);

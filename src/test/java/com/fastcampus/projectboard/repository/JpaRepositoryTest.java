@@ -51,8 +51,6 @@ class JpaRepositoryTest {
         UserAccount userAccount = userAccountRepository.save(UserAccount.of("uno", "pw", null, null, null));
         Article article = Article.of(userAccount, "new article", "new content", "#spring");
 
-        // When
-        articleRepository.save(article);
 
         // Then
         assertThat(articleRepository.count()).isEqualTo(previousCount + 1);

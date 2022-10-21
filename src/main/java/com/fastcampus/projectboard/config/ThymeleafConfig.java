@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 
 @Configuration
-public class ThymleafConfig {
+public class ThymeleafConfig {
 
     @Bean
     public SpringResourceTemplateResolver thymeleafTemplateResolver(

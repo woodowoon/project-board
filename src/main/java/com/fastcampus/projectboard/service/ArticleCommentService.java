@@ -11,11 +11,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
+
 @Slf4j
 @RequiredArgsConstructor
 @Transactional
 @Service
 public class ArticleCommentService {
+
     private final ArticleRepository articleRepository;
     private final ArticleCommentRepository articleCommentRepository;
 

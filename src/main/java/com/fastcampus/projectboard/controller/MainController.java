@@ -10,5 +10,4 @@ public class MainController {
     public String root() {
         return "forward:/articles";
     }
-
 }

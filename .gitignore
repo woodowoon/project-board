@@ -232,3 +232,5 @@ gradle-app.setting
 
 ### JPA Buddy
 .jpb/
+
+/src/main/resources/application.yaml

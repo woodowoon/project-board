@@ -3,12 +3,13 @@ package com.fastcampus.projectboard.domain;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import javax.persistence.*;
 import java.util.Objects;
+
 @Getter
 @ToString
 @Table(indexes = {
-        @Index(columnList = "userId", unique = true),
         @Index(columnList = "email", unique = true),
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
@@ -36,8 +37,8 @@ public class UserAccount extends AuditingFields {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof UserAccount userAccount)) return false;
-        return userId != null && userId.equals(userAccount.userId);
+        if (!(o instanceof UserAccount that)) return false;
+        return userId != null && userId.equals(that.getUserId()); // userId와 userId 를 계속 비교하니깐 수정이 되지 않았다.
     }
     @Override
     public int hashCode() {

@@ -3,6 +3,7 @@ package com.fastcampus.projectboard.domain;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -15,6 +16,7 @@ import java.util.Objects;
 })
 @Entity
 public class ArticleComment extends AuditingFields {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -41,10 +43,12 @@ public class ArticleComment extends AuditingFields {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ArticleComment that)) return false;
-        return id != null && id.equals(that.id);
+        return id != null && id.equals(that.getId());
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
